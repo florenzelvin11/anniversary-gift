@@ -1,0 +1,89 @@
+/* Container to center the notebook paper */
+.notebook-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align at the top */
+  padding: 20px;
+  min-height: 100vh; /* Ensures the height of the container at least takes the full viewport height */
+  overflow: auto; /* Enables scrolling if the content grows beyond the screen size */
+}
+
+/* Notebook paper that expands with content */
+.notebook-paper {
+  width: 90%; /* Responsive width */
+  max-width: 800px; /* Maximum width */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: 
+    repeating-linear-gradient(
+      #E4E9F0 0px, 
+      #E4E9F0 1px, /* Line color */
+      #fff 3px, 
+      #fff 40px /* Spacing between lines */
+    );
+  border-left: 20px solid #658ced; /* Left margin in red */
+  border-radius: 8px;
+  overflow: hidden; /* Ensure overflow is hidden within the paper itself */
+  margin-bottom: 20px; /* Provide spacing for a nice layout */
+}
+
+/* Responsive letter content */
+.letter-content {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  color: #333;
+  line-height: 2;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+/* Ensure proper padding and line spacing on smaller screens */
+@media (max-width: 768px) {
+  .notebook-container {
+    padding: 10px;
+  }
+  .notebook-paper {
+    padding: 20px;
+    width: 100%; /* Responsive width */
+  }
+}
+
+/* Button container styling */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Styling the buttons */
+.nav-button {
+  background: none;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  color: #FF6A6A; /* Hover color for buttons */
+}
+
+/* Spotify Container */
+.spotify-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Spotify Embed Wrapper with Border Radius */
+.spotify-embed-wrapper {
+  width: 300px; /* Match the width of the iframe */
+  height: 380px; /* Match the height of the iframe */
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden; /* Ensure the iframe respects the border-radius */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a nice effect */
+}

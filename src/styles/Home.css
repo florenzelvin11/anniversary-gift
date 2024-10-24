@@ -1,0 +1,18 @@
+.typing-animation {
+  white-space: nowrap;
+  overflow: hidden; /* Hide the overflowing text */
+  display: inline-block;
+  line-height: 1.2; /* Adjust line-height to prevent cutting off */
+  padding-bottom: 0.5em; /* Add extra padding at the bottom */
+}
+
+.cursor {
+  border-right: 2px solid black;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
